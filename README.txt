@@ -18,14 +18,14 @@ Representation of pipeline data structures
 	•Physical Register file (PRF) -class
 	•Architectural Register File(ARF) -class
 	
-	Rename Table:	
-	Instructions get renamed in the D/RF stage. The destination register in the instruction is renamed with a physical register from 	the list of free physical registers. This physical register is recorded as the stand in for the physical register in the RAT and 	the source registers are replace with their most recent stand-ins.
+Rename Table:	
+Instructions get renamed in the D/RF stage. The destination register in the instruction is renamed with a physical register from the list of free physical registers. This physical register is recorded as the stand in for the physical register in the RAT and the source registers are replace with their most recent stand-ins.
 
-	Reorder buffer:
-	A reorder buffer with size 32 is implemented using a circular queue. Entries are made in this buffer from the tail and commits 		are done from its head.
+Reorder buffer:
+A reorder buffer with size 32 is implemented using a circular queue. Entries are made in this buffer from the tail and commits are done from its head.
 
-	Load Store Queue:
-	An array list is used to implement the LSQ to maintain the order of the LOAD and STORE instructions. The LSQ supports forwarding 	 and bypassing. The LOAD and STORE instructions take 3 cycles to do the memory access.
+Load Store Queue:
+An array list is used to implement the LSQ to maintain the order of the LOAD and STORE instructions. The LSQ supports forwarding and bypassing. The LOAD and STORE instructions take 3 cycles to do the memory access.
 
 COMMANDS:
 	•initialize : initialize the pipeline
